@@ -1,0 +1,497 @@
+:root {
+    /* 
+     * COLOR PALETTE — 4 colors
+     * I Generated this pallette with coolors.co and contrast checked with WebAIM
+     * All these ratios are against white (#FFFFFF) for text use
+     */
+    --color-primary:   #1565C0;  /* strong blue   — 5.75:1  */
+    --color-secondary: #2E7D32;  /* forest green   — 5.13:1  */
+    --color-accent:    #C62828;  /* deep red       — 5.62:1  */
+    --color-neutral:   #212B36;  /* ink black      — 14.35:1 */
+
+    /* semantic colors */
+    --color-background:    #F8F9FB;
+    --color-surface:       #FFFFFF;
+    --color-text-dark:     var(--color-neutral);
+    --color-text-light:    #FFFFFF;
+    --color-text-muted:    #5A6872;          /* 5.07:1 on white */
+    --color-border:        #D5DAE0;
+    --color-focus-ring:    var(--color-primary);
+
+    /* 
+     * TYPOGRAPHY
+     * primary: Inter — clean sans-serif, solid readability
+     * secondary: JetBrains Mono — for code/labels
+     * Scale uses a 1.25 modular ratio from a 1rem (16px) base
+     */
+    --font-primary:   'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --font-mono:      'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
+
+    --text-xs:   0.75rem;   /* 12px */
+    --text-sm:   0.875rem;  /* 14px */
+    --text-base: 1rem;      /* 16px */
+    --text-lg:   1.25rem;   /* 20px */
+    --text-xl:   1.563rem;  /* 25px — 1rem × 1.25^2 */
+    --text-2xl:  1.953rem;  /* 31px — 1rem × 1.25^3 */
+    --text-3xl:  2.441rem;  /* 39px — 1rem × 1.25^4 */
+
+    /* 
+     * SPACING — 8px base unit system
+     */
+    --space-1: 0.25rem;   /*  4px */
+    --space-2: 0.5rem;    /*  8px */
+    --space-3: 1rem;      /* 16px */
+    --space-4: 1.5rem;    /* 24px */
+    --space-5: 2rem;      /* 32px */
+    --space-6: 3rem;      /* 48px */
+
+    /* border Radius */
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 16px;
+    --radius-full: 9999px;
+
+    /* shadows */
+    --shadow-sm:  0 1px 2px rgba(0,0,0,0.06);
+    --shadow-md:  0 4px 12px rgba(0,0,0,0.08);
+    --shadow-lg:  0 8px 24px rgba(0,0,0,0.12);
+
+    /* transitions */
+    --transition-fast: 150ms ease;
+    --transition-base: 250ms ease;
+}
+
+/* reset */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* base styles */
+body {
+    font-family: var(--font-primary);
+    font-size: var(--text-base);
+    line-height: 1.6;
+    color: var(--color-text-dark);
+    background-color: var(--color-background);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: var(--space-6) var(--space-4);
+}
+
+/* section layout */
+section {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-5);
+    margin-bottom: var(--space-5);
+    box-shadow: var(--shadow-sm);
+}
+
+/* typography */
+h1 {
+    font-size: var(--text-3xl);
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--color-primary);
+    margin-bottom: var(--space-2);
+    letter-spacing: -0.02em;
+}
+
+h2 {
+    font-size: var(--text-2xl);
+    font-weight: 600;
+    line-height: 1.3;
+    color: var(--color-neutral);
+    margin-bottom: var(--space-4);
+    padding-bottom: var(--space-2);
+    border-bottom: 2px solid var(--color-border);
+}
+
+h3 {
+    font-size: var(--text-xl);
+    font-weight: 600;
+    line-height: 1.4;
+    color: var(--color-secondary);
+    margin-bottom: var(--space-2);
+}
+
+.body-text {
+    font-size: var(--text-base);
+    line-height: 1.7;
+    margin-bottom: var(--space-3);
+    max-width: 65ch;
+}
+
+.small-text {
+    font-size: var(--text-xs);
+    color: var(--color-text-muted);
+    line-height: 1.5;
+}
+
+.mono-text {
+    font-family: var(--font-mono);
+    font-size: var(--text-sm);
+}
+
+/* header */
+.page-header {
+    text-align: center;
+    margin-bottom: var(--space-5);
+}
+
+.page-header p {
+    font-size: var(--text-lg);
+    color: var(--color-text-muted);
+    max-width: 50ch;
+    margin: 0 auto;
+}
+
+/* color palette */
+.color-palette {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: var(--space-3);
+}
+
+.color-swatch {
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.color-swatch:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.swatch-color {
+    height: 100px;
+    display: flex;
+    align-items: flex-end;
+    padding: var(--space-2);
+}
+
+.swatch-info {
+    padding: var(--space-2) var(--space-3);
+    background: var(--color-surface);
+    border-top: 1px solid var(--color-border);
+}
+
+.swatch-info strong {
+    display: block;
+    font-size: var(--text-sm);
+    color: var(--color-neutral);
+}
+
+.swatch-info code {
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+    color: var(--color-text-muted);
+}
+
+.swatch-info .contrast-ratio {
+    display: inline-block;
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+    color: var(--color-secondary);
+    background: color-mix(in srgb, var(--color-secondary) 10%, transparent);
+    padding: 2px 6px;
+    border-radius: var(--radius-sm);
+    margin-top: var(--space-1);
+}
+
+/* typography demo */
+.type-specimen {
+    margin-bottom: var(--space-4);
+    padding-bottom: var(--space-4);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.type-specimen:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.type-meta {
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-1);
+}
+
+/* spacing demo */
+.spacing-row {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    margin-bottom: var(--space-3);
+}
+
+.spacing-row:last-child {
+    margin-bottom: 0;
+}
+
+.spacing-label {
+    font-family: var(--font-mono);
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+    min-width: 120px;
+    text-align: right;
+}
+
+.spacing-bar {
+    height: 36px;
+    background: linear-gradient(135deg, var(--color-primary), color-mix(in srgb, var(--color-primary) 70%, var(--color-secondary)));
+    border-radius: var(--radius-sm);
+    transition: opacity var(--transition-base);
+}
+
+.spacing-bar:hover {
+    opacity: 0.85;
+}
+
+.spacing-value {
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+    color: var(--color-text-muted);
+    min-width: 50px;
+}
+
+/* interactive components */
+
+/* buttons */
+.component-group {
+    margin-bottom: var(--space-5);
+}
+
+.component-group:last-child {
+    margin-bottom: 0;
+}
+
+.component-group h3 {
+    margin-bottom: var(--space-3);
+}
+
+.component-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--space-3);
+}
+
+/* base button reset and shared styles */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-2);
+    font-family: var(--font-primary);
+    font-size: var(--text-sm);
+    font-weight: 600;
+    line-height: 1;
+    padding: 0.625rem 1.25rem;
+    border: 2px solid transparent;
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color var(--transition-fast),
+                color var(--transition-fast),
+                border-color var(--transition-fast),
+                box-shadow var(--transition-fast),
+                transform var(--transition-fast);
+}
+
+/* focus ring: visible on keyboard focus only */
+.btn:focus-visible {
+    outline: 3px solid var(--color-focus-ring);
+    outline-offset: 2px;
+}
+
+/* primary button */
+.btn-primary {
+    background-color: var(--color-primary);
+    color: var(--color-text-light);
+}
+
+.btn-primary:hover {
+    background-color: color-mix(in srgb, var(--color-primary) 85%, black);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-md);
+}
+
+.btn-primary:active {
+    transform: translateY(0);
+    background-color: color-mix(in srgb, var(--color-primary) 75%, black);
+    box-shadow: none;
+}
+
+/* secondary (outline) button */
+.btn-secondary {
+    background-color: transparent;
+    color: var(--color-primary);
+    border-color: var(--color-primary);
+}
+
+.btn-secondary:hover {
+    background-color: color-mix(in srgb, var(--color-primary) 8%, transparent);
+    border-color: color-mix(in srgb, var(--color-primary) 85%, black);
+    transform: translateY(-1px);
+}
+
+.btn-secondary:active {
+    transform: translateY(0);
+    background-color: color-mix(in srgb, var(--color-primary) 15%, transparent);
+}
+
+/* accent button */
+.btn-accent {
+    background-color: var(--color-accent);
+    color: var(--color-text-light);
+}
+
+.btn-accent:hover {
+    background-color: color-mix(in srgb, var(--color-accent) 85%, black);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-md);
+}
+
+.btn-accent:active {
+    transform: translateY(0);
+    background-color: color-mix(in srgb, var(--color-accent) 75%, black);
+}
+
+/* Links */
+.link {
+    color: var(--color-primary);
+    font-weight: 500;
+    text-decoration: underline;
+    text-decoration-color: color-mix(in srgb, var(--color-primary) 40%, transparent);
+    text-underline-offset: 3px;
+    transition: color var(--transition-fast),
+                text-decoration-color var(--transition-fast);
+}
+
+.link:hover {
+    color: var(--color-secondary);
+    text-decoration-color: var(--color-secondary);
+}
+
+.link:focus-visible {
+    outline: 3px solid var(--color-focus-ring);
+    outline-offset: 2px;
+    border-radius: 2px;
+}
+
+.link:visited {
+    color: #6A1B9A; /* purple — 7.26:1 on white */
+    text-decoration-color: color-mix(in srgb, #6A1B9A 40%, transparent);
+}
+
+.link:visited:hover {
+    color: color-mix(in srgb, #6A1B9A 80%, black);
+    text-decoration-color: color-mix(in srgb, #6A1B9A 80%, black);
+}
+
+/* state labels next to demo links */
+.state-label {
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+    color: var(--color-text-muted);
+    padding: 2px 8px;
+    background: var(--color-background);
+    border-radius: var(--radius-full);
+}
+
+/* form inputs */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-1);
+    max-width: 360px;
+}
+
+.form-label {
+    font-size: var(--text-sm);
+    font-weight: 600;
+    color: var(--color-neutral);
+}
+
+.form-input {
+    font-family: var(--font-primary);
+    font-size: var(--text-base);
+    padding: 0.5rem 0.75rem;
+    border: 2px solid var(--color-border);
+    border-radius: var(--radius-md);
+    background: var(--color-surface);
+    color: var(--color-text-dark);
+    transition: border-color var(--transition-fast),
+                box-shadow var(--transition-fast);
+}
+
+.form-input::placeholder {
+    color: color-mix(in srgb, var(--color-text-muted) 70%, transparent);
+}
+
+.form-input:hover {
+    border-color: color-mix(in srgb, var(--color-primary) 50%, var(--color-border));
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-primary) 20%, transparent);
+}
+
+/* textarea variant */
+.form-textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+/* section description */
+.section-desc {
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+    margin-top: calc(var(--space-2) * -1);
+    margin-bottom: var(--space-4);
+}
+
+/* responsive */
+@media (max-width: 640px) {
+    .container {
+        padding: var(--space-4) var(--space-3);
+    }
+
+    section {
+        padding: var(--space-4);
+    }
+
+    h1 { font-size: var(--text-2xl); }
+    h2 { font-size: var(--text-xl); }
+
+    .color-palette {
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    }
+
+    .spacing-label {
+        min-width: 80px;
+        font-size: var(--text-xs);
+    }
+
+    .component-row {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

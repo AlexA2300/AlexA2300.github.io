@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design System</title>
+
+    <!-- google fonts: Inter and JetBrains Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/wa6.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <header class="page-header">
+            <h1>Design System</h1>
+        </header>
+
+        <!-- color palette -->
+        <section aria-labelledby="colors-heading">
+            <h2 id="colors-heading">Color Palette</h2>
+            <p class="section-desc">Colors with verified WCAG AA contrast ratios against white (#FFF).</p>
+
+            <div class="color-palette">
+                <!-- primary -->
+                <div class="color-swatch">
+                    <div class="swatch-color" style="background-color: var(--color-primary);" aria-hidden="true"></div>
+                    <div class="swatch-info">
+                        <strong>Primary</strong>
+                        <code>#1565C0</code>
+                        <span class="contrast-ratio">5.75 : 1</span>
+                    </div>
+                </div>
+
+                <!-- secondary -->
+                <div class="color-swatch">
+                    <div class="swatch-color" style="background-color: var(--color-secondary);" aria-hidden="true"></div>
+                    <div class="swatch-info">
+                        <strong>Secondary</strong>
+                        <code>#2E7D32</code>
+                        <span class="contrast-ratio">5.13 : 1</span>
+                    </div>
+                </div>
+
+                <!-- accent -->
+                <div class="color-swatch">
+                    <div class="swatch-color" style="background-color: var(--color-accent);" aria-hidden="true"></div>
+                    <div class="swatch-info">
+                        <strong>Accent</strong>
+                        <code>#C62828</code>
+                        <span class="contrast-ratio">5.62 : 1</span>
+                    </div>
+                </div>
+
+                <!-- neutral -->
+                <div class="color-swatch">
+                    <div class="swatch-color" style="background-color: var(--color-neutral);" aria-hidden="true"></div>
+                    <div class="swatch-info">
+                        <strong>Neutral</strong>
+                        <code>#212B36</code>
+                        <span class="contrast-ratio">14.35 : 1</span>
+                    </div>
+                </div>                
+            </div>
+        </section>
+
+        <!-- typography -->
+        <section aria-labelledby="type-heading">
+            <h2 id="type-heading">Typography</h2>
+            <p class="section-desc">Inter (primary) and JetBrains Mono (code), scaled at a 1.25x modular ratio from a 16 px base.</p>
+
+            <!-- H1 -->
+            <div class="type-specimen">
+                <p class="type-meta">H1: Inter 700 | 2.441 rem (39 px)</p>
+                <h1 style="margin-bottom: 0;">The quick brown fox</h1>
+            </div>
+
+            <!-- H2 -->
+            <div class="type-specimen">
+                <p class="type-meta">H2: Inter 600 | 1.953 rem (31 px)</p>
+                <h2 style="border: none; padding: 0; margin-bottom: 0;">The quick brown fox</h2>
+            </div>
+
+            <!-- H3 -->
+            <div class="type-specimen">
+                <p class="type-meta">H3: Inter 600 | 1.563 rem (25 px)</p>
+                <h3 style="margin-bottom: 0;">The quick brown fox</h3>
+            </div>
+
+            <!-- body -->
+            <div class="type-specimen">
+                <p class="type-meta">Body: Inter 400 | 1 rem (16 px)</p>
+                <p class="body-text" style="margin-bottom: 0;">The quick brown fox</p>
+            </div>
+
+            <!-- small text -->
+            <div class="type-specimen">
+                <p class="type-meta">Small: Inter 400 | 0.75 rem (12 px)</p>
+                <p class="small-text">The quick brown fox</p>
+            </div>
+
+            <!-- monospace -->
+            <div class="type-specimen">
+                <p class="type-meta">Mono: JetBrains Mono 400 | 0.875 rem (14 px)</p>
+                <p class="mono-text">The quick brown fox</p>
+            </div>
+        </section>
+
+        <!-- spacing system -->
+        <section aria-labelledby="spacing-heading">
+            <h2 id="spacing-heading">Spacing System</h2>
+            <p class="section-desc">An 8 px base unit.</p>
+
+            <!-- 4px -->
+            <div class="spacing-row">
+                <span class="spacing-label">--space-1</span>
+                <div class="spacing-bar" style="width: 4px;" aria-hidden="true"></div>
+                <span class="spacing-value">4 px</span>
+            </div>
+
+            <!-- 8px -->
+            <div class="spacing-row">
+                <span class="spacing-label">--space-2</span>
+                <div class="spacing-bar" style="width: 32px;" aria-hidden="true"></div>
+                <span class="spacing-value">8 px</span>
+            </div>
+
+            <!-- 16px -->
+            <div class="spacing-row">
+                <span class="spacing-label">--space-3</span>
+                <div class="spacing-bar" style="width: 80px;" aria-hidden="true"></div>
+                <span class="spacing-value">16 px</span>
+            </div>
+
+            <!-- 24px -->
+            <div class="spacing-row">
+                <span class="spacing-label">--space-4</span>
+                <div class="spacing-bar" style="width: 140px;" aria-hidden="true"></div>
+                <span class="spacing-value">24 px</span>
+            </div>
+
+            <!-- 32px -->
+            <div class="spacing-row">
+                <span class="spacing-label">--space-5</span>
+                <div class="spacing-bar" style="width: 200px;" aria-hidden="true"></div>
+                <span class="spacing-value">32 px</span>
+            </div>
+
+            <!-- 48px -->
+            <div class="spacing-row">
+                <span class="spacing-label">--space-6</span>
+                <div class="spacing-bar" style="width: 300px;" aria-hidden="true"></div>
+                <span class="spacing-value">48 px</span>
+            </div>
+        </section>
+
+        <!-- interactive components -->
+        <section aria-labelledby="components-heading">
+            <h2 id="components-heading">Interactive Components</h2>
+            <p class="section-desc">Buttons/links/form inputs with accessible focus indicators.</p>
+
+            <!-- buttons -->
+            <div class="component-group">
+                <h3>Buttons</h3>
+                <div class="component-row">
+                    <button type="button" class="btn btn-primary">Primary</button>
+                    <button type="button" class="btn btn-secondary">Secondary</button>
+                    <button type="button" class="btn btn-accent">Accent</button>
+                </div>
+            </div>
+
+            <!-- links -->
+            <div class="component-group">
+                <h3>Links</h3>
+                <div class="component-row">
+                    <a href="#components-heading" class="link">Default Link</a>
+                    <span class="state-label">:hover</span>
+
+                    <a href="#colors-heading" class="link">Another Link</a>
+                    <span class="state-label">:visited</span>
+                </div>
+            </div>
+
+            <!-- form inputs -->
+            <div class="component-group">
+                <h3>Form Inputs</h3>
+                <div class="component-row" style="flex-direction: column; align-items: stretch; max-width: 360px;">
+                    <div class="form-group">
+                        <label for="demo-text" class="form-label">Text Input</label>
+                        <input type="text" id="demo-text" class="form-input" placeholder="Enter something…">
+                    </div>
+                    <div class="form-group">
+                        <label for="demo-email" class="form-label">Email Input</label>
+                        <input type="email" id="demo-email" class="form-input" placeholder="you@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="demo-textarea" class="form-label">Textarea</label>
+                        <textarea id="demo-textarea" class="form-input form-textarea" placeholder="Write a longer message…"></textarea>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+    </div>
+
+</body>
+</html>
