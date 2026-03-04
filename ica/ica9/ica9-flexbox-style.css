@@ -1,0 +1,83 @@
+body {
+  font: 1.2em / 1.5 sans-serif;
+}
+h1 {
+    font-size: 1.2em;
+    margin-left: 20px;
+    border-bottom: 3px solid black;
+}
+
+
+/* FLEXBOX PART 1 */
+.nav-1 .ul-1 {
+  max-width: 750px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.nav-1 .a-1:link,
+.nav-1 .a-1:visited {
+  background-color: #4d7298;
+  border: 2px solid #77a6b6;
+  border-radius: 0.5em;
+  color: white;
+  padding: 0.5em;
+  display: inline-block;
+  text-decoration: none;
+}
+.nav-1 .ul-1 {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+/* FLEXBOX PART 2 */
+.ul-2 {
+  max-width: 750px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.li-2 {
+  background-color: #4d7298;
+  border: 2px solid #77a6b6;
+  border-radius: 0.5em;
+  color: white;
+  padding: 0.5em;
+}
+.ul-2 {
+  display: flex;
+}
+.li-2 {
+  flex: 1;
+}
+.li-2:first-child {
+    flex: 2;
+}
+
+
+/* FLEXBOX PART 3 */
+.ul-3 {
+  width: 450px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.li-3 {
+  background-color: #4d7298;
+  border: 2px solid #77a6b6;
+  border-radius: 0.5em;
+  color: white;
+  padding: 0.5em;
+  margin: 0.5em;
+}
+
+.ul-3 {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.li-3 {
+  flex: auto;
+}
