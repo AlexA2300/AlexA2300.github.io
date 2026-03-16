@@ -1,0 +1,138 @@
+/* header */
+.site-header {
+    background-color: color-mix(in srgb, var(--color-surface) 85%, transparent);
+    border-bottom: 1px solid var(--color-border);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--space-3) var(--space-5);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* skip */
+.skip-link {
+    position: absolute;
+    top: -100%;
+    left: var(--space-3);
+    z-index: 200;
+    padding: var(--space-2) var(--space-3);
+    background-color: var(--color-primary);
+    color: #0f1117;
+    font-family: var(--font-mono);
+    font-size: var(--text-sm);
+    font-weight: 600;
+    border-radius: 0 0 var(--radius-md) var(--radius-md);
+    text-decoration: none;
+}
+
+.skip-link:focus-visible {
+    top: 0;
+}
+
+.skip-link:hover {
+    color: #0f1117;
+}
+
+
+.logo {
+    font-family: var(--font-mono);
+    font-size: var(--text-xl);
+    font-weight: 700;
+    color: var(--color-text-dark);
+    letter-spacing: -0.03em;
+    transition: color var(--transition-fast);
+}
+
+.logo:hover {
+    color: var(--color-text-light);
+}
+
+.logo .accent {
+    color: var(--color-json-prompt);
+}
+
+
+/*  navigation  */
+.nav-list {
+    display: flex;
+    gap: var(--space-5);
+}
+
+.nav-list a {
+    font-family: var(--font-mono);
+    font-size: var(--text-sm);
+    font-weight: 500;
+    color: var(--color-text-muted);
+    padding: var(--space-2) 0;
+    position: relative;
+    transition: color var(--transition-fast);
+    text-decoration: none;
+}
+
+/* animated underline */
+.nav-list a::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: var(--color-primary);
+    transform: scaleX(0);
+    transform-origin: left center;
+    transition: transform var(--transition-base);
+}
+
+.nav-list a:hover {
+    color: var(--color-text-dark);
+}
+
+.nav-list a:hover::after {
+    transform: scaleX(1);
+}
+
+.nav-list a[aria-current="page"] {
+    color: var(--color-primary);
+}
+
+.nav-list a[aria-current="page"]::after {
+    transform: scaleX(1);
+}
+
+.nav-list a:focus-visible {
+    outline: 3px solid var(--color-focus-ring);
+    outline-offset: 4px;
+    border-radius: 2px;
+}
+
+
+main {
+    flex: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--space-6) var(--space-5);
+    width: 100%;
+}
+
+.page-header {
+    text-align: center;
+    margin-bottom: var(--space-6);
+}
+
+.page-header h1 {
+    color: var(--color-primary);
+}
+
+.page-header p {
+    color: var(--color-text-muted);
+    font-size: var(--text-lg);
+}

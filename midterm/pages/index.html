@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Alex Archer: DevOps Engineer specializing in CI/CD, container orchestration, and cloud infrastructure.">
+  <meta name="author" content="Alex Archer">
+  <title>Alex Archer | DevOps Engineer</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../css/tokens.css">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/layout.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/hero.css">
+  <link rel="stylesheet" href="../css/pages.css">
+  <link rel="stylesheet" href="../css/footer.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+</head>
+
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="header-content">
+      <h1><a href="index.html" aria-current="page" class="logo">Alex<span class="accent"> Archer</span>.</a></h1>
+      <nav aria-label="Main navigation">
+        <ul class="nav-list">
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <section class="hero" aria-labelledby="profile-image">
+
+      <div class="terminal-card" role="img" aria-label="Terminal window showing: Alex Archer, DevOps Engineer in Denver CO, focused on CI/CD Infrastructure, Container Orchestration, and Cloud Architecture">
+        <div class="terminal-bar" aria-hidden="true">
+          <span class="terminal-dot terminal-dot--red"></span>
+          <span class="terminal-dot terminal-dot--yellow"></span>
+          <span class="terminal-dot terminal-dot--green"></span>
+          <span class="terminal-title">alexa2300@github.io ~ -zsh</span>
+        </div>
+        <div class="terminal-body" aria-hidden="true">
+          <div class="json-line json-line--prompt"><span class="json-prompt">$ cat identity.json</span></div>
+          <div class="json-line"><span class="json-bracket">{</span></div>
+          <div class="json-line"><span class="json-indent"></span><span class="json-key">"name"</span><span class="json-punctuation">: </span><span class="json-string">"Alex Archer"</span><span class="json-punctuation">,</span></div>
+          <div class="json-line"><span class="json-indent"></span><span class="json-key">"role"</span><span class="json-punctuation">: </span><span class="json-string">"DevOps Engineer"</span><span class="json-punctuation">,</span></div>
+          <div class="json-line"><span class="json-indent"></span><span class="json-key">"location"</span><span class="json-punctuation">: </span><span class="json-string">"Denver, CO"</span><span class="json-punctuation">,</span></div>
+          <div class="json-line"><span class="json-indent"></span><span class="json-key">"focus"</span><span class="json-punctuation">: [</span></div>
+          <div class="json-line"><span class="json-indent"></span><span class="json-indent"></span><span class="json-array-val">"I build reliable Continuous Integration and Deployment (CI/CD) infrastructure, and seamlessly bridge the gap between development and operations."</span></div>
+          <div class="json-line"><span class="json-indent"></span><span class="json-punctuation">]</span></div>
+          <div class="json-line"><span class="json-bracket">}</span></div>
+          <div class="json-line"><span class="json-string">$</span><span class="json-cursor" aria-hidden="true"></span></div>
+        </div>
+      </div>
+
+      <div class="hero-image">
+        <figure class="profile-frame">
+          <div class="profile-frame-bar" aria-hidden="true">
+            <span class="terminal-dot terminal-dot--red"></span>
+            <span class="terminal-dot terminal-dot--yellow"></span>
+            <span class="terminal-dot terminal-dot--green"></span>
+            <span class="profile-frame-title">profile.png</span>
+          </div>
+          <img id="profile-image" src="../images/profile-2.jpg" alt="Alex Archer, DevOps Engineer">
+          <figcaption class="profile-caption" aria-hidden="true">
+            <span class="json-string">$ whoami &rarr;</span> <span class="json-bright">Alex Archer, DevOps Engineer</span>
+          </figcaption>
+        </figure>
+      </div>
+
+      <footer class="hero-footer">
+          <div class="hero-cta">
+            <a href="projects.html" class="btn btn-primary">View My Work</a>
+            <a href="contact.html" class="btn btn-secondary">Get in Touch</a>
+          </div>
+      </footer>
+
+    </section>
+
+    <section class="skills-preview" aria-labelledby="skills-heading">
+      <div class="skills-window">
+
+        <div class="skills-window-bar">
+          <span class="terminal-dot terminal-dot--red" aria-hidden="true"></span>
+          <span class="terminal-dot terminal-dot--yellow" aria-hidden="true"></span>
+          <span class="terminal-dot terminal-dot--green" aria-hidden="true"></span>
+          <h2 id="skills-heading" class="skills-window-title" aria-label="What I Do">// Proficiencies</h2>
+        </div>
+
+        <div class="skills-window-body">
+          <div class="skills-grid">
+
+            <article class="skill-card">
+              <div class="skill-icon" aria-hidden="true">
+                <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path class="icon-path" d="M12 6C12 3.79086 10.2091 2 8 2C5.79086 2 4 3.79086 4 6C1.79086 6 0 7.79086 0 10V14H16V11C16 8.79086 14.2091 7 12 7V6Z"/>
+                </svg>
+              </div>
+              <h3>Cloud Infrastructure</h3>
+              <p>Designing and managing scalable cloud architectures on Amazon Web Services.</p>
+            </article>
+
+            <article class="skill-card">
+              <div class="skill-icon" aria-hidden="true">
+                <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path class="icon-path" fill-rule="evenodd" d="M2.75 2.5A1.75 1.75 0 001 4.25v1C1 6.216 1.784 7 2.75 7h1a1.75 1.75 0 001.732-1.5H6.5a.75.75 0 01.75.75v3.5A2.25 2.25 0 009.5 12h1.018c.121.848.85 1.5 1.732 1.5h1A1.75 1.75 0 0015 11.75v-1A1.75 1.75 0 0013.25 9h-1a1.75 1.75 0 00-1.732 1.5H9.5a.75.75 0 01-.75-.75v-3.5A2.25 2.25 0 006.5 4H5.482A1.75 1.75 0 003.75 2.5h-1zM2.5 4.25A.25.25 0 012.75 4h1a.25.25 0 01.25.25v1a.25.25 0 01-.25.25h-1a.25.25 0 01-.25-.25v-1zm9.75 6.25a.25.25 0 00-.25.25v1c0 .138.112.25.25.25h1a.25.25 0 00.25-.25v-1a.25.25 0 00-.25-.25h-1z" clip-rule="evenodd"/>
+                </svg>
+              </div>
+              <h3>CI/CD Pipelines</h3>
+              <p>Building automated integration and deployment pipelines with Jenkins.</p>
+            </article>
+
+            <article class="skill-card">
+              <div class="skill-icon" aria-hidden="true">
+                <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                  <path class="icon-path" d="M42.9,12.2l-18-9L24,3l-.9.2-18,9a.1.1,0,0,0-.1.1l19,9.6,19-9.6A.1.1,0,0,0,42.9,12.2ZM26,25.4V44.2l16.9-8.6A1.9,1.9,0,0,0,44,33.8V16.3ZM4,16.3V33.8a1.9,1.9,0,0,0,1.1,1.8L22,44.2V25.4Z"/>
+                </svg>
+              </div>
+              <h3>Container Orchestration</h3>
+              <p>Deploying and managing containerized applications with Kubernetes and Docker.</p>
+            </article>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-content">
+      <p>2025 Alex Archer</p>
+      <nav aria-label="Social links">
+
+        <ul class="social-links">
+          <li><a href="https://github.com/" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+          <li><a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+        </ul>
+
+      </nav>
+    </div>
+  </footer>
+
+</body>
+</html>

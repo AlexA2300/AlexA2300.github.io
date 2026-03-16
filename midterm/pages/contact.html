@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Get in touch with me.">
+  <meta name="author" content="Alex Archer">
+  <title>Contact | Alex: DevOps Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/tokens.css">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/layout.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/hero.css">
+  <link rel="stylesheet" href="../css/pages.css">
+  <link rel="stylesheet" href="../css/footer.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+</head>
+
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="header-content">
+      <a href="index.html" class="logo">Alex<span class="accent"> Archer</span>.</a>
+      <nav aria-label="Main navigation">
+        <ul class="nav-list">
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html" aria-current="page">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <section class="page-header">
+      <h1>Contact</h1>
+    </section>
+
+    <section class="contact-content">
+      <div class="skills-window">
+
+        <div class="skills-window-bar">
+          <span class="terminal-dot terminal-dot--red" aria-hidden="true"></span>
+          <span class="terminal-dot terminal-dot--yellow" aria-hidden="true"></span>
+          <span class="terminal-dot terminal-dot--green" aria-hidden="true"></span>
+          <h2 class="skills-window-title" aria-label="Get in Touch">// Get In Touch</h2>
+        </div>
+
+        <div class="skills-window-body contact-info">
+          <p>I'm always interested in hearing about new opportunities, interesting projects, or just connecting with others. Feel free to reach out through any of the channels below.</p>
+
+          <address>
+            <div class="contact-item">
+              <h3>Email</h3>
+              <a href="mailto:alar2300@colorado.edu" class="link">alar2300@colorado.edu</a>
+            </div>
+            <div class="contact-item">
+              <h3>Location</h3>
+              <p>Denver, Colorado</p>
+            </div>
+            <div class="contact-item">
+              <h3>Profiles</h3>
+              <ul class="contact-links">
+                <li><a href="https://github.com/" class="link" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                <li><a href="https://www.linkedin.com/" class="link" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+              </ul>
+            </div>
+          </address>
+
+        </div>
+      </div>
+
+      <div class="skills-window">
+
+        <div class="skills-window-bar">
+          <span class="terminal-dot terminal-dot--red" aria-hidden="true"></span>
+          <span class="terminal-dot terminal-dot--yellow" aria-hidden="true"></span>
+          <span class="terminal-dot terminal-dot--green" aria-hidden="true"></span>
+          <h2 id="send-message-heading" class="skills-window-title" aria-label="Send a Message">// Send Message</h2>
+        </div>
+
+        <div class="skills-window-body">
+
+          <form class="contact-form" action="#" method="post" aria-labelledby="send-message-heading">
+            <div class="form-group">
+              <label for="name" class="form-label">Name<span aria-hidden="true"> *</span></label>
+              <input type="text" id="name" name="name" class="form-input" required autocomplete="name">
+            </div>
+            <div class="form-group">
+              <label for="email" class="form-label">Email<span aria-hidden="true"> *</span></label>
+              <input type="email" id="email" name="email" class="form-input" required autocomplete="email">
+            </div>
+            <div class="form-group">
+              <label for="subject" class="form-label">Subject<span aria-hidden="true"> *</span></label>
+              <input type="text" id="subject" name="subject" class="form-input" required>
+            </div>
+            <div class="form-group">
+              <label for="message" class="form-label">Message<span aria-hidden="true"> *</span></label>
+              <textarea id="message" name="message" rows="6" class="form-input form-textarea" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Send Message</button>
+          </form>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-content">
+      <p>2025 Alex Archer</p>
+      <nav aria-label="Social links">
+        <ul class="social-links">
+          <li><a href="https://github.com/" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+          <li><a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>
