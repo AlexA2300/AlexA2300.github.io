@@ -10,19 +10,18 @@ function randomValueFromArray(array) {
 
 
 // text strings
-const characters = ["Willy the Goblin", "Big Daddy", "Father Christmas"];
-const places = ["the soup kitchen", "Disneyland", "the White House"];
-const events = [ "spontaneously combusted", "melted into a puddle on the sidewalk", "turned into a slug and slithered away"];
+const characters = ["Yo Mama", "Donald Trump", "Jesus Christ"];
+const places = ["Yo Mama's House", "the DMV", "the bottom of the ocean"];
+const events = [ "a hobo break dancing", "those soggy waffles they tell you not to eat", "one of those Mormon wives being arrested"];
 
 
 // Partial return random string function
 function returnRandomStoryString() {
-  // It was 94 Fahrenheit outside, so :insertx: went for a walk. When they got to :inserty:, they stared in horror for a few moments, then :insertz:. Bob saw the whole thing, but was not surprised — :insertx: weighs 300 pounds, and it was a hot day.
   const char = randomValueFromArray(characters);
   const place = randomValueFromArray(places);
   const event = randomValueFromArray(events);
 
-  let current_story = `It was 94 Fahrenheit outside, so ${char} went for a walk. When they got to ${place}, they stared in horror for a few moments, then ${event}. Bob saw the whole thing, but was not surprised — ${char} weighs 300 pounds, and it was a hot day.`;
+  let current_story = `It was 94 Fahrenheit outside, so ${char} decided to sell hot dogs at ${place}, but when they arrieved they saw ${event}. Bob saw the whole thing, and no longer had an apetite for the 300 pounds of hot dogs that ${char} was selling.`;
 
   return current_story;
 }
