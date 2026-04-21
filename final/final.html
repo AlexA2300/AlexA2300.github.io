@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volume Control</title>
+    <link rel="stylesheet" href="../css/final.css">
+</head>
+<body>
+    <div class="page-container">
+        <h1 class="title">Volume Control</h1>
+
+        <div class="slider-container">
+            <span class="slider-label label-quiet">🔈</span>
+            <div class="slider-track" id="sliderTrack">
+                <div class="slider-fill" id="sliderFill"></div>
+                <div class="slider-knob" id="sliderKnob">
+                    <div class="face">
+                        <div class="eye eye-left">
+                            <div class="pupil" id="pupilLeft"></div>
+                        </div>
+                        <div class="eye eye-right">
+                            <div class="pupil" id="pupilRight"></div>
+                        </div>
+                        <div class="mouth" id="mouth"></div>
+                    </div>
+                    <div class="legs" id="legs">
+                        <div class="leg leg-left"></div>
+                        <div class="leg leg-right"></div>
+                    </div>
+                </div>
+            </div>
+            <span class="slider-label label-loud">🔊</span>
+        </div>
+
+        <div class="volume-display" id="volumeDisplay">50%</div>
+
+        <button class="play-btn" id="playBtn">▶ Play</button>
+
+        <audio id="audio" loop preload="auto">
+            <source src="./final-audio.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+
+    <script src="../js/final.js"></script>
+</body>
+</html>
